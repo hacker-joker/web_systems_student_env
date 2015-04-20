@@ -1,3 +1,3 @@
 <?php
 
-echo "начало"
+echo "start";
