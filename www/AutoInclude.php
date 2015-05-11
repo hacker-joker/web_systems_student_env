@@ -9,6 +9,7 @@ Class Avto_include{
     public function Include_all(){
         $this->Core();
         $this->Application();
+        $this->Template();
     }
     public function LoadForeach($Dir)
     {
@@ -18,12 +19,17 @@ Class Avto_include{
     }
     public function Core()
     {
-        $this->LoadForeach("core/*.php");
+        $this->LoadForeach("Core/*.php");
     }
     public function Application()
     {
-        $this->LoadForeach("application/*/Url.php");
+        $this->LoadForeach("Application/*/Url.php");
 
+    }
+    public function Template()
+    {
+        $this->LoadForeach("Core/*/*/*.php");
+        $this->LoadForeach("Application/*/*/*.php");
     }
 }
 ?>
