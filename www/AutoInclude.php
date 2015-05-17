@@ -31,5 +31,6 @@ Class Avto_include{
         $this->LoadForeach("Core/*/*/*.php");
         $this->LoadForeach("Application/*/*/*.php");
     }
+
 }
 ?>

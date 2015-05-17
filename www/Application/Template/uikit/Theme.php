@@ -12,7 +12,7 @@ class uikitTheme {
         'TextField' => 'uikitTextField',
         'ButtonField' => 'uikitButton',
         'Password' => 'uikitRegField',
-        'Form' => 'uikitLimeForm'
+        'Form' => 'uikitForm'
     );
     function GetView($view_name) {
         return isset($this->views[$view_name]) ? $this->views[$view_name] : null;

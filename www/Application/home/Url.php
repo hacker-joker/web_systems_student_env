@@ -10,9 +10,15 @@ $r = Router::getInstance();
 $r->get("/", function() {
     print('Welcome to site we navigete the home');
 });
+$r->get("/home", function() {
+    print('IS NOT TYTY');
+});
 $r->get("/room", function() {
     print('Welcome to site we navigete the home');
 });
 $r->get("/services", function() {
+    print('Welcome to site we navigete the home');
+});
+$r->get("/:idsadsad/:DSFDS", function() {
     print('Welcome to site we navigete the home');
 });

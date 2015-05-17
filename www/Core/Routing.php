@@ -26,6 +26,8 @@ class Router
     {
         $pattern = $this->constructPattern($pattern);
         $this->routes[$type][$pattern] = $callback;
+         //var_dump($this->routes);
+       // var_dump($this->routes[$type][$pattern]);
     }
     public function process($method, $uri)
     {
@@ -56,10 +58,13 @@ class Router
     private function constructPattern($pattern)
     {
         $pattern = str_replace('/', '\/', $pattern);
+        //var_dump($pattern);
         preg_match_all("/(?<=:)[a-zA-Z0-9]+/", $pattern, $matches);
         foreach ($matches[0] as $value) {
+           // var_dump($value);
             $pattern = str_replace(":$value", '\d+', $pattern);
         }
+        //var_dump($pattern);
         $pattern = "^$pattern$";
         return $pattern;
     }
